@@ -1,0 +1,92 @@
+/* ************************
+   04.2: Banner
+   ********************* */
+   .banner {
+      padding-top: 30px;
+      background-color: #e6f5f8;
+      margin-bottom: 60px;
+   }
+   .banner-content {
+      h1 {
+         line-height: 1.208;
+         margin-top: -10px;
+         margin-bottom: 16px;
+         @include mobileXs {
+            font-size: 26px;
+         }
+      }
+      p {
+         margin-bottom: 26px;
+      }
+      @include tab {
+         margin-bottom: 60px;
+      }
+   }
+   .banner-img {
+      margin-bottom: -120px;
+      img {
+         @include tab {
+            width: 100%;
+         }
+      }
+   }
+   .banner-btn-group {
+      .btn {
+         min-width: 152px;
+         &:not(:last-child) {
+            margin-right: 17px;
+         }
+      } 
+   }
+   .statistics {
+      transform: translateY(60px);
+      @extend .radius-5;
+      .statistics-left {
+         height: auto;
+         padding-left: 35px;
+         display: flex;
+         align-items: center;
+         @include mobileLg {
+            height: auto;
+            padding: 20px 15px 0;
+            justify-content: center;
+         }
+      }
+      .statistics-right {
+         text-align: right;
+         height: 120px;
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+         padding-right: 50px;
+         @include mobileLg {
+            height: 60px;
+            padding: 0 15px;
+            justify-content: center;
+         }
+         ul {
+            li {
+               font-size: 24px;
+               @extend .title_font;
+               font-weight: $medium;
+               padding: 0 14px;
+               position: relative;
+               line-height: 1;
+               &:not(:last-child) {
+                  &:after {
+                     height: 16px;
+                     width: 2px;
+                     background-color: #ffc299;
+                     content: "";
+                     position: absolute;
+                     right: -1px;
+                     top: 4px;
+                  }
+               }
+               &:last-child {
+                  padding-right: 0;
+               }
+            }
+         }
+      }
+   }

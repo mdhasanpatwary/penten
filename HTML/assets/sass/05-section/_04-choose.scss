@@ -1,0 +1,69 @@
+/* ************************
+05.4: Choose Us
+********************* */
+.chooseUs-left {
+    @include tab {
+        margin-bottom: 60px;
+    }
+    .section-title {
+        margin-bottom: 22px;
+    }
+    p {
+        &.last-child {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.slider-fixed-content {
+    position: relative;
+
+    p {
+        max-width: 360px;
+        color: $white;
+        padding: 20px 50px;
+    }
+    &:after {
+        width: 475px;
+        height: 170px;
+        left: 0;
+        bottom: 0;
+        @extend .c1-bg;
+        z-index: -1;
+        content: "";
+        position: absolute;
+    }
+}
+
+.service-slider {
+    max-width: 550px;
+    margin: 0 auto;
+    .owl-stage-outer {
+        margin: -20px;
+        padding: 20px;
+    }
+}
+
+.service-sligle-slide {
+    background-color: $white;
+    box-shadow: 0 0 10px rgba($c1, 0.08);
+    padding: 25px 20px;
+    @extend .radius-5;
+    text-align: center;
+    @include mobileMd {
+        max-width: 300px;
+        margin: auto;
+    }
+    .icon {
+        margin-bottom: 20px;
+        svg {
+            width: 32px;
+            height: 30px;
+        }
+    }
+    .content {
+        h4 {
+            margin-bottom: 12px;
+        }
+    }
+}

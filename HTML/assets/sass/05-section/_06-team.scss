@@ -1,0 +1,80 @@
+/* ************************
+05.6: Team
+********************* */
+.team-carousel {
+  .owl-stage-outer {
+    margin: -20px;
+    padding: 20px;
+  }
+  @include tab {
+    margin-bottom: 30px;
+    .owl-dots {
+      bottom: -20px;
+    }
+  }
+}
+
+.single-team {
+  padding: 40px 20px;
+  @extend .radius-5;
+  border: 1px solid #ffe8d9;
+  text-align: center;
+  @extend .trans3;
+
+  .team-avatare {
+    margin-bottom: 30px;
+    img {
+      width: 100px;
+      height: 100px;
+      @extend .radius;
+      margin: 0 auto;
+    }
+  }
+  .team-content {
+    h4 {
+      margin-bottom: 12px;
+    }
+    .team-social {
+      margin-top: 14px;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 5px 20px rgba(255, 102, 0, 0.1);
+  }
+}
+
+.team-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    display: inline-grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #414141;
+    padding: 5px;
+    svg {
+      path {
+        transition: all 0.3s ease;
+      }
+    }
+    &:hover {
+      border-color: #ff6600;
+      background-color: #ff6600;
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+    svg {
+      width: 15px;
+    }
+  }
+}

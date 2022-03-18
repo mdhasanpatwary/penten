@@ -1,0 +1,52 @@
+/*
+	*******************
+	Template name:  Penten
+	Version:        1.0
+	Author:         Jit Banik
+
+	NOTE:
+	-----
+	Please DO NOT EDIT THIS CSS, you may need to use "custom.css" file for writing your custom css.
+	We may release future updates so it will overwrite this file. it's better and safer to use "custom.css".
+
+    ******** CSS INDEX ********
+    01. Base
+        1.1 Reset 
+        1.2 Grid
+        1.3 Margin/Padding
+        1.4 color
+    02. Module
+        2.1 Input
+        2.2 Socials
+    03. Components
+        3.1 Common Classes
+        3.2 Animation
+        3.3 Preloader
+        3.4 Buttons 
+        3.5 Section Title
+        3.6 Back to Top
+    04. Layout
+        4.1 Header
+        4.2 Banner
+        4.3 Footer
+        4.4 Blog
+    05. Sections
+        5.1 About
+        5.2 Service
+        5.3 Portfolio
+        5.4 Choose
+        5.5 Sponsor
+        5.6 Team
+        5.7 Pricing
+        5.8 Working
+        5.9 Testimonial
+
+    ********************/
+    
+// IMPORT ALL DIRECTORY SASS FILE
+@import '00-abstracts/00-abstracts-dir';
+@import '01-base/00-base-dir';
+@import '02-module/00-module-dir';
+@import '03-components/00-component-dir';
+@import '04-layout/00-layout-dir';
+@import '05-section/00-section-dir';

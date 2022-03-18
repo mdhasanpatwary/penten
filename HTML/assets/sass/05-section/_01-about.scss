@@ -1,0 +1,50 @@
+/* ************************
+05.1: About
+********************* */
+.about-img {
+    @include tab {
+        margin-bottom: 60px;
+    }
+}
+
+.about-content {
+    .tab-btn {
+        border-bottom: 2px solid #e1e1e1;
+        margin-bottom: 27px;
+        li {
+            position: relative;
+            color: $black;
+            font-size: 18px;
+            font-weight: $medium;
+            padding-bottom: 12px;
+            cursor: pointer;
+            @extend .trans3;
+            &:not(:last-child) {
+                margin-right: 20px;
+                @include mobileXs {
+                    margin-right: 14px;
+                    font-size: 16px;
+                }
+            }
+            &:after {
+                width: 100%;
+                height: 0px;
+                @extend .c1-bg;
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                content: "";
+                @extend .trans3;
+                opacity: 0;
+            }
+            &.active {
+                @extend .c1;
+                &:after {
+                    opacity: 1;
+                    height: 2px;
+                    bottom: -2px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+/* ************************
+   03.5: Section Title
+   ********************* */
+.section-title {
+    margin-bottom: 54px;
+    margin-top: -4px;
+    @include mobileSm {
+        margin-bottom: 40px;
+    }
+    h2 {
+        font-size: 35px;
+        line-height: 1.28;
+        margin-top: -10px;
+        margin-bottom: 24px;
+        text-transform: capitalize;
+        @include mobileSm {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+/* ************************
+05.5: Sponsor
+********************* */
+.logo-slider {
+    .owl-stage {
+        display: flex;
+        align-items: center;
+    }
+}
+.logo-single {
+    img {
+        @extend .trans3;
+        cursor: pointer;
+        filter: grayscale(1);
+        width: auto !important;
+    }
+    &:hover {
+        img {
+            filter: none;
+        }
+    }
+}

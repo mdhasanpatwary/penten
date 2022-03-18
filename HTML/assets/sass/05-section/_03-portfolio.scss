@@ -1,0 +1,75 @@
+/* ************************
+05.3: Portfolio
+********************* */
+
+.portfolio-bg {
+  position: relative;
+  z-index: 1;
+  &:after {
+    width: 100%;
+    height: 77%;
+    top: auto;
+    bottom: 0;
+    @extend .c1-bg;
+    position: absolute;
+    content: "";
+    z-index: -1;
+    @include mobileMd {
+      height: 93%;
+    }
+  }
+}
+
+.popup-link {
+  display: block;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  &:after {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    opacity: 0;
+    border-radius: 5px;
+    position: absolute;
+    content: "";
+    transition: all 0.3s ease;
+  }
+  .popup-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    &:after {
+      opacity: 0.3;
+    }
+    .popup-icon {
+      top: 50%;
+      opacity: 1;
+    }
+  }
+  @include mobileMd {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.single-funfact {
+  @extend .text-white;
+}

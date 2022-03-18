@@ -1,0 +1,60 @@
+/* ************************
+05.7: Pricing
+********************* */
+
+.price {
+    align-items: center;
+    padding: 24px;
+    background-color: $white;
+    border: 1px solid #ffe8d9;
+    margin-bottom: 30px;
+    @extend .radius-5;
+    @extend .trans3;
+    .price-thumb {
+        margin-right: 24px;
+    }
+    @include mobileSm {
+        flex-direction: column;
+        padding: 16px;
+        .price-thumb {
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
+    }
+    
+    .price-content {
+        h4 {
+            margin-bottom: 10px;
+        }
+        .doller {
+            @extend .c1;
+            font-weight: $bold;
+            font-size: 24px;
+            position: relative;
+            padding-right: 14px;
+            margin-right: 14px;
+            &:after {
+                width: 2px;
+                height: 18px;
+                background-color: #e1e1e1;
+                position: absolute;
+                right: 0;
+                content: "";
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        @include mobileSm {
+            text-align: center;
+        }
+    }
+    &:hover {
+        box-shadow: 0 5px 20px rgba(255, 102, 0, 0.1);
+    }
+}
+
+.doller-wrap {
+    @include mobileSm {
+        justify-content: center;
+    }
+}

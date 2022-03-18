@@ -1,0 +1,53 @@
+/* ************************
+   03.4: Buttons
+   ********************* */
+.btn {
+    border: 1px solid $c1;
+    text-transform: capitalize;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    font-weight: $bold;
+    padding: 18px 33px;
+    @extend .c2;
+    line-height: 1;
+    @extend .radius-50;
+    @extend .trans3;
+    &:hover {
+        @extend .c1-bg;
+        color: $white;
+    }
+    &.btn-fill {
+        @extend .c1-bg;
+        color: $white;
+        &:hover {
+            background-color: transparent;
+            @extend .c2;
+        }
+        &.style--two {
+            &:hover {
+                @extend .c1;
+            }
+        }
+    }
+    &.submit-btn {
+        background-color: $white;
+        @extend .c1;
+        &:hover {
+            background-color: #f1f1f1;
+            @extend .c1;
+        }
+    }
+}
+
+
+.buy-now-btn {
+    font-size: 16px;
+    font-weight: $bold;
+    color: #252e45;
+    text-transform: capitalize;
+    &:hover {
+        @extend .c1;
+    }
+} 

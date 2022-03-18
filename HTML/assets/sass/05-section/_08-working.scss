@@ -1,0 +1,46 @@
+/* ************************
+05.8: Working
+********************* */
+.video {
+    @include medium {
+        margin-bottom: 40px;
+    }
+    img {
+        max-width: none;
+        position: relative;
+        left: -406px;
+        @include medium {
+            left: auto;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.working-padding {
+    @include customMq2(1200) {
+        padding: 0 !important;
+    }
+}
+
+.working-process {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    .icon {
+        width: 80px;
+        height: 80px;
+        @extend .radius;
+        background-color: $white;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ffe8d9;
+        margin-right: 14px;
+    }
+    .content{
+        h5 {
+            margin-bottom: 10px;
+        }
+    }
+}

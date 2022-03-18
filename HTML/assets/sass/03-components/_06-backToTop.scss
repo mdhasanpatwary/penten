@@ -1,0 +1,39 @@
+/* ************************
+   03.8: Back to Top
+   ********************* */
+.back-to-top {
+    position: fixed;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    border: 1px solid #FFF5E5;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 10%;
+    right: 4%;
+    @extend .c2;
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    @extend .trans3;
+    @extend .c1-bg;
+    svg {
+        margin-top: 0px;
+        @extend .trans3;
+    }
+    &.show {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+        z-index: 999;
+    }
+    &:hover {
+        //@extend .c3;
+        svg {
+            margin-top: -5px;
+        }
+    }
+}

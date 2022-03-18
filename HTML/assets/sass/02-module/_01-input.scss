@@ -1,0 +1,59 @@
+/* ************************
+   02.1: Animations
+   ********************* */
+/* Theme Input Style */
+.theme-input-style {
+    border: none;
+    border-bottom: 1px solid;
+    height: 35px;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 16px;
+    background-color: transparent;
+    @extend .trans3;
+    @extend .c1;
+    @extend .c1-bo;
+    @include mobileXs {
+        padding: 0 10px;
+        font-size: 14px;
+    }
+}
+
+textarea.theme-input-style {
+    height: 200px;
+    padding: 20px 20px;
+}
+
+/* Theme Input Group */
+.theme-input-group {
+    position: relative;
+    button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        border-bottom: 2px solid $c2;
+        padding: 0 10px;
+        font-weight: $bold;
+        @extend .title_font;
+        @extend .trans3;
+        &:hover {
+            letter-spacing: .5px;
+        }
+    }
+}
+
+/* Input Group Icon */
+.input-group-icon {
+    position: relative;
+    label {
+        margin-bottom: 0;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .theme-input-style {
+        padding-left: 35px;
+    }
+}

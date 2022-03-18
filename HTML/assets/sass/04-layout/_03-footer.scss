@@ -1,0 +1,115 @@
+/* ************************
+   02.4: Footer
+   ********************* */
+.footer {
+  @extend .text-white;
+  @extend .c2-bg;
+  .footer-main {
+    padding: 90px 0 40px;
+    @include tab {
+      padding: 60px 0 10px;
+    }
+    .widget {
+      padding-bottom: 50px;
+    }
+  }
+
+  a {
+    &:hover {
+      @extend .c1;
+    }
+  }
+
+  .widget_title {
+    padding-bottom: 16px;
+    margin-bottom: 35px;
+    position: relative;
+    &:after {
+      width: 70px;
+      height: 2px;
+      @extend .c1-bg;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+    }
+  }
+
+  .wedget_about {
+    p {
+      margin-bottom: 20px;
+    }
+    .footer-contact {
+      span {
+        display: block;
+      }
+    }
+  }
+  .widget_our_service {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        flex: 1 1 50%;
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 12px;
+        &:after {
+          position: absolute;
+          content: "";
+          background-image: url(../img/svg/angle-right2.svg);
+          left: 0;
+          top: 7px;
+          width: 10px;
+          height: 10px;
+        }
+        &:hover {
+          &:after {
+            background-image: url(../img/svg/angle-right2-hover.svg);
+          }
+        }
+      }
+    }
+  }
+  .widget_quick_links {
+    ul {
+      max-width: 255px;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .footer-bottom {
+    padding: 46px 0;
+    position: relative;
+    @include tab {
+      padding: 26px 0;
+    }
+    &:after {
+      width: 100%;
+      height: 1px;
+      background-color: #1d273f;
+      top: 0;
+      left: 0;
+      position: absolute;
+      content: "";
+    }
+    .footer-bottom-left {
+      a {
+        color: $c1 !important;
+      }
+    }
+  }
+}
+
+.footer-menu {
+  li {
+    &:not(:last-child) {
+      margin-right: 26px;
+      @include mobileSm {
+        margin-right: 10px;
+      }
+    }
+  }
+}

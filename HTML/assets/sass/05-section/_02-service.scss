@@ -1,0 +1,102 @@
+/* ************************
+05.2: Service
+********************* */
+
+.tab-content {
+    margin-top: 48px;
+    @include tab {
+        margin-top: 20px;
+    }
+}
+
+.service-tab-btn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include tab {
+        justify-content: space-between;
+    }
+    li {
+        padding: 10px 20px;
+        background-color: $white;
+        font-size: 18px;
+        font-weight: $medium;
+        color: $black;
+        height: 60px;
+        @extend .radius-5;
+        cursor: pointer;
+        @extend .trans3;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        @include medium {
+            padding: 10px;
+            font-size: 16px;
+        }
+        @include tab {
+            flex: 1 1 48%;
+            max-width: 48%;
+        }
+        @include mobileSm {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+        &:not(:last-child) {
+            margin-right: 30px;
+            @include medium {
+                margin-right: 15px;
+            }
+            @include tab {
+                margin: 0;
+                margin-bottom: 16px;
+            }
+        }
+        svg, i {
+            margin-right: 10px;
+            position: relative;
+            top: -3px;
+        }
+        &.active {
+            @extend .c1-bg;
+            color: $white;
+            svg path {
+                fill: $white;
+            }
+        }
+    }
+}
+
+.tab-content-content {
+    @include tab {
+        margin-bottom: 60px;
+    }
+}
+
+/* Funfact */
+.single-funfact {
+    @include tab {
+        margin-bottom: 30px;
+    }
+    .counter-wrap {
+        font-size: 60px;
+        font-weight: $bold;
+        font-family: $title_font;
+        line-height: 1;
+        display: block;
+        margin-bottom: 20px;
+        @include mobileSm {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+    }
+    p {
+        opacity: 0.8;
+        font-weight: $medium;
+        font-size: 18px;
+        margin-bottom: -8px;
+        @include mobileSm {
+            font-size: 14px;
+        }
+    }
+}
