@@ -1,7 +1,7 @@
 /*---------------------------------------------
 Template name :  Penten
 Version       :  1.0
-Author        :  Jit Banik
+Author        :  PatwaryTheme
 
 NOTE:
 ------
