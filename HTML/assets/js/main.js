@@ -1,7 +1,7 @@
 /*---------------------------------------------
 Template name :  Penten
 Version       :  1.0
-Author        :  PatwaryTheme
+Author        :  Jit Banik
 
 NOTE:
 ------
@@ -16,16 +16,15 @@ We may release future updates so it will overwrite this file. it's better and sa
     04: Menu Responsive in Small Device
     05: Background Image
     06: PopUp Video Play
-    07: Counter Up
-    08: Check Data
-    09: Owl Carousel
-    10: Changing svg color 
-    11: Google map
-    12: Preloader 
-    13: Contact Form
-    14: Back to top button
-    15: Tabs
-    16: Scrollspy
+    07: Check Data
+    08: Owl Carousel
+    09: Changing svg color 
+    10: Google map
+    11: Preloader 
+    12: Contact Form
+    13: Back to top button
+    14: Tabs
+    15: Scrollspy
 ----------------------------------------------*/
 
 (function ($) {
@@ -160,27 +159,15 @@ We may release future updates so it will overwrite this file. it's better and sa
     },
   });
 
-  /*========================
-    07: Counter Up
-    ==========================*/
-  $(".counter").counterUp({
-    delay: 10,
-    time: 1000,
-  });
-  $(".counter2").counterUp({
-    delay: 100,
-    time: 2000,
-  });
-
   /*==================================
-    08: Check Data
+    07: Check Data
     ====================================*/
   var checkData = function (data, value) {
     return typeof data === "undefined" ? value : data;
   };
 
   /*==================================
-    09: Owl Carousel
+    08: Owl Carousel
     ====================================*/
   var $owlCarousel = $(".owl-carousel");
   $owlCarousel.each(function () {
@@ -209,7 +196,7 @@ We may release future updates so it will overwrite this file. it's better and sa
   });
 
   /*==================================
-    10: Changing svg color 
+    09: Changing svg color 
     ====================================*/
   jQuery("img.svg").each(function () {
     var $img = jQuery(this);
@@ -255,7 +242,7 @@ We may release future updates so it will overwrite this file. it's better and sa
   });
 
   /*==================================
-    11: Google map 
+    10: Google map 
     ====================================*/
   var $map = $('[data-trigger="map"]'),
     $mapOps;
@@ -475,14 +462,14 @@ We may release future updates so it will overwrite this file. it's better and sa
   }
 
   /*==================================
-    12: Preloader 
+    11: Preloader 
     ====================================*/
   $(window).on("load", function () {
     $(".preloader").fadeOut(1000);
   });
 
   /*==================================
-    13: Contact Form
+    12: Contact Form
     ====================================*/
   $(".contact-form").on("submit", function (e) {
     e.preventDefault();
@@ -499,7 +486,7 @@ We may release future updates so it will overwrite this file. it's better and sa
   });
 
   /*============================================
-    14: Back to top button
+    13: Back to top button
     ==============================================*/
   var $backToTopBtn = $(".back-to-top");
 
@@ -532,7 +519,7 @@ We may release future updates so it will overwrite this file. it's better and sa
   }
 
   /*==================================
-    15: Tabs
+    14: Tabs
     ====================================*/
   var tabSelect = $("[data-tab-select]");
   var tab = $("[data-tab]");
@@ -560,7 +547,7 @@ We may release future updates so it will overwrite this file. it's better and sa
   });
 
   /*========================
-    16: Scrollspy
+    15: Scrollspy
     ==========================*/
   $(window).bind("scroll", function () {
     var currentTop = $(window).scrollTop();

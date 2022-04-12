@@ -1,6 +1,6 @@
-# Hostpack
+# Penten
 
-Hostpack | Web Hosting and Domain HTML Template
+Penten - Professional Clipping Path HTML Template
 
 ## Build Setup
 
