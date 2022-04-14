@@ -1581,12 +1581,20 @@ small {
   margin-top: 120px;
 }
 
+.mt-60 {
+  margin-top: 60px;
+}
+
 .mt-30 {
   margin-top: 30px;
 }
 
 .mb-120 {
   margin-bottom: 120px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
 }
 
 .mb-30 {
@@ -6945,8 +6953,8 @@ textarea.theme-input-style {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  border: 1px solid #1d9bf0;
-  background-color: #1d9bf0;
+  border: 1px solid #ddd;
+  background-color: transparent;
   padding: 5px;
 }
 
@@ -6954,15 +6962,24 @@ textarea.theme-input-style {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  fill: #252e45;
+}
+
+.team-social a:hover {
+  border: 1px solid #1d9bf0;
+  background-color: #1d9bf0;
+}
+
+.team-social a:hover svg path {
   fill: #ffffff;
 }
 
-.team-social a.instagram {
+.team-social a:hover.instagram {
   background-color: #ed4956;
   border-color: #ed4956;
 }
 
-.team-social a.pinterest {
+.team-social a:hover.pinterest {
   background-color: #e60023;
   border-color: #e60023;
 }

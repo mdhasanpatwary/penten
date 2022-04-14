@@ -9,7 +9,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const imagemin = require("gulp-imagemin");
 const imageminPngQuant = require("imagemin-pngquant");
 const imageminJpegRecompress = require("imagemin-jpeg-recompress");
-const htmlhint = require("gulp-htmlhint");
+// const htmlhint = require("gulp-htmlhint");
 const concat = require("gulp-concat");
 const zip = require("gulp-zip");
 const cleanCSS = require("gulp-clean-css");
@@ -157,13 +157,13 @@ gulp.task("images", function (cb) {
 });
 
 /*= ========== HTML Valid ============== */
-gulp.task("html-valid", function (cb) {
-  gulp
-    .src("HTML/*.html")
-    .pipe(htmlhint({ "attr-lowercase": ["viewBox"] }))
-    .pipe(htmlhint.failAfterError());
-  cb();
-});
+// gulp.task("html-valid", function (cb) {
+//   gulp
+//     .src("HTML/*.html")
+//     .pipe(htmlhint({ "attr-lowercase": ["viewBox"] }))
+//     .pipe(htmlhint.failAfterError());
+//   cb();
+// });
 
 /** ******************************************* */
 /* 03: Generate TF Package
@@ -357,7 +357,8 @@ gulp.task("wrap", function (cb) {
 gulp.task("default", gulp.parallel("sass", "watch"));
 
 /*= ========== Build ============== */
-gulp.task("build", gulp.series("sass", "html-valid", "images"));
+// gulp.task("build", gulp.series("sass", "html-valid", "images"));
+gulp.task("build", gulp.series("sass", "images"));
 
 /*= ========== Generate Files ============== */
 gulp.task("generate", gulp.series("clean", "copy-files"));

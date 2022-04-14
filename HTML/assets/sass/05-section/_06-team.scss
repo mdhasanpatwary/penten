@@ -54,22 +54,31 @@
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 1px solid #1d9bf0;
-    background-color: #1d9bf0;
+    border: 1px solid #ddd;
+    background-color: transparent;
     padding: 5px;
     svg {
       path {
         transition: all 0.3s ease;
-        fill: $white;
+        fill: $c2;
       }
     }
-    &.instagram {
-      background-color: #ed4956;
-      border-color: #ed4956;
-    }
-    &.pinterest {
-      background-color: #e60023;
-      border-color: #e60023;
+    &:hover {
+      border: 1px solid #1d9bf0;
+      background-color: #1d9bf0;
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+      &.instagram {
+        background-color: #ed4956;
+        border-color: #ed4956;
+      }
+      &.pinterest {
+        background-color: #e60023;
+        border-color: #e60023;
+      }
     }
     // &:hover {
     //   border-color: #ff6600;

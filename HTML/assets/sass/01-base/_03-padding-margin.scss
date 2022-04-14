@@ -2,82 +2,50 @@
    01.2: Padding/Margin
    ********************* */
 
-   $p-list: 120, 90, 60;  //Put your Values e.g. 100, 80, 60;
-   $tab: 60; //Put Your Value which is you want to reduce in tab e.g. 50;
-   
-   // Padding Top
-   @each $padding in $p-list {
-       .pt-#{$padding} {
-           padding-top: $padding + px;
-           @include tab{
-               @if $padding > $tab {
-                   padding-top: ($padding - $tab) + px;
-               } @else {
-                   padding-top: 0;
-               }
-           }
-       }
-   }
-   // Padding Bottom
-   @each $padding in $p-list {
-       .pb-#{$padding} {
-           padding-bottom: $padding + px;
-           @include tab{
-               @if $padding > $tab {
-                   padding-bottom: ($padding - $tab) + px;
-               } @else {
-                   padding-bottom: 0;
-               }
-           }
-       }
-   }
-   
-   
-   $m-list: 120, 30; //Put your Values e.g. 100, 80, 60;
-   
-   // Margin Top
-   @each $margin in $m-list {
-       .mt-#{$margin} {
-           margin-top: $margin + px;
-       }
-   }
-   // Margin Bottom
-   @each $margin in $m-list {
-       .mb-#{$margin} {
-           margin-bottom: $margin + px;
-       }
-   }
+$p-list: 120, 90, 60; //Put your Values e.g. 100, 80, 60;
+$tab: 60; //Put Your Value which is you want to reduce in tab e.g. 50;
 
+// Padding Top
+@each $padding in $p-list {
+  .pt-#{$padding} {
+    padding-top: $padding + px;
+    @include tab {
+      @if $padding > $tab {
+        padding-top: ($padding - $tab) + px;
+      } @else {
+        padding-top: 0;
+      }
+    }
+  }
+}
+// Padding Bottom
+@each $padding in $p-list {
+  .pb-#{$padding} {
+    padding-bottom: $padding + px;
+    @include tab {
+      @if $padding > $tab {
+        padding-bottom: ($padding - $tab) + px;
+      } @else {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
 
+$m-list: 120, 60, 30; //Put your Values e.g. 100, 80, 60;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Margin Top
+@each $margin in $m-list {
+  .mt-#{$margin} {
+    margin-top: $margin + px;
+  }
+}
+// Margin Bottom
+@each $margin in $m-list {
+  .mb-#{$margin} {
+    margin-bottom: $margin + px;
+  }
+}
 
 // Padding Top
 // @for $i from 1 through 15 {
@@ -85,8 +53,8 @@
 //         padding-top : #{$i * 10}px;
 //     }
 // }
-  
-// Padding Bottom    
+
+// Padding Bottom
 // @for $i from 1 through 15  {
 //     .pb-#{$i * 10} {
 //         padding-bottom : #{$i * 10}px;
@@ -99,8 +67,8 @@
 //         margin-top : #{$i * 10}px;
 //     }
 // }
-  
-// margin Bottom    
+
+// margin Bottom
 // @for $i from 1 through 15  {
 //     .mb-#{$i * 10} {
 //         margin-bottom : #{$i * 10}px;
